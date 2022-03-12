@@ -6,17 +6,17 @@ export const ComponentTest = ()=>{
     let counter = 0;
     const counterFunc = ()=>{
         counter++;
-        const el = <p>{counter}</p>;
+        return counter;
     }
 
     const handleClick = ()=>{
-        alert("Me presiono :(");
+        alert("Me presiono :(, counter = "+ counterFunc());
     }
 
     return(
         <>
         <button type="button" className="btn btn-primary" onClick={handleClick}>Hello World :)</button>
-        {console.log(setInterval(counterFunc,5000))}
+        
         </>
         
         
