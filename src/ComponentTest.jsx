@@ -10,7 +10,7 @@ export const ComponentTest = ()=>{
     }
 
     const handleClick = ()=>{
-        alert("Me presiono :(, counter = "+ counterFunc());
+        alert("Me presiono :( counter = "+ counterFunc());
     }
 
     return(
