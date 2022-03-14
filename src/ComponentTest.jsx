@@ -1,25 +1,42 @@
 import React from "react";
 
 
-export const ComponentTest = ()=>{
-
+export const ComponentTest = () => {
     let counter = 0;
-    const counterFunc = ()=>{
-        counter++;
-        return counter;
+    const BtnCounterMas = () => {
+        
+        const counterFuncMas = () => {
+            counter++;
+            return counter;
+        }
+
+        const handleClick = () => {
+            alert("Me presiono :( counter = " + counterFuncMas());
+        }
+
+        return <button type="button" className="btn btn-primary m-3" onClick={handleClick}>Contador +</button>
+        
     }
 
-    const handleClick = ()=>{
-        alert("Me presiono :( counter = "+ counterFunc());
+    const BtnCounterMenos = () => {
+        const counterFuncMenos = () => {
+            counter--;
+            return counter;
+        }
+
+        const handleClick = () => {
+            alert("Me presiono :( counter = " + counterFuncMenos());
+        }
+
+        return <button type="button" className="btn btn-primary m-3" onClick={handleClick}>Contador -</button>
+        
     }
 
     return(
-        <>
-        <button type="button" className="btn btn-primary" onClick={handleClick}>Hello World :)</button>
-        
-        </>
-        
-        
+        <div className="btn-group" role="group">
+        <BtnCounterMas />
+        <BtnCounterMenos />
+        </div>
     )
-    
+
 }
